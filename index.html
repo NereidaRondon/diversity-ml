@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+      style="height: 100%; width: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <title>7taps</title>
+    <script type="text/javascript"
+            src="config.js"></script>
+    <script type="text/javascript">
+        var link = 'https://app.7taps.com/lbOkiEvQue';
+        if (Config.endpoint && Config.authUser && Config.authPassword) {
+            var auth = window.btoa(`${Config.authUser}:${Config.authPassword}`);
+            link = link +
+                "?endpoint=" + encodeURIComponent(Config.endpoint) +
+                "&auth=" + encodeURIComponent(auth);
+        }
+
+        function onLoad() {
+            document.location.href = link;
+        }
+    </script>
+</head>
+
+<body onload="onLoad()"
+      style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     style="margin:auto;background:#fff;display:block;"
+     width="100px"
+     height="100px"
+     viewBox="0 0 100 100"
+     preserveAspectRatio="xMidYMid">
+    <circle cx="50"
+            cy="50"
+            fill="none"
+            stroke="#4e3ef5"
+            stroke-width="10%"
+            r="45"
+            stroke-dasharray="164.93361431346415 56.97787143782138">
+        <animateTransform attributeName="transform"
+                          type="rotate"
+                          repeatCount="indefinite"
+                          dur="1s"
+                          values="0 50 50;360 50 50"
+                          keyTimes="0;1"></animateTransform>
+    </circle>
+</svg>
+</body>
+
+</html>
